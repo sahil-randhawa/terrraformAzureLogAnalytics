@@ -11,7 +11,7 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = “tfstate-gademo-rg”
+    resource_group_name  = "tfstate-gademo-rg"
     storage_account_name = "tfstategademo"
     container_name       = "tfstate"
     key                  = "tfdemo.ga.tfstate"
