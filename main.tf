@@ -19,7 +19,7 @@ terraform {
 }
 provider "azurerm" {
   features {}
-  subscription_id = "XXXX-XXXX-XXXX-XXXX"
+  subscription_id = var.subscription_id
 }
 # This ensures we have unique CAF compliant names for our resources.
 module "naming" {
