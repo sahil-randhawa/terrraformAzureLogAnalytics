@@ -17,9 +17,15 @@ terraform {
     key                  = "tfdemo.ga.tfstate"
   }
 }
+
+variable "subscription_id" {
+  description = "The Azure subscription ID."
+  type       = string
+}
+
 provider "azurerm" {
   features {}
-  # subscription_id = TF_VAR_subscription_id
+  subscription_id = var.subscription_id
 }
 # This ensures we have unique CAF compliant names for our resources.
 module "naming" {
